@@ -56,6 +56,9 @@ buttonRoll.addEventListener('click', function () {
         `current--${activePlayer}`
       ).textContent = currentScore;
     } else {
+      var audio = new Audio('wrong.mp3')
+      audio.play();
+ 
       switchPlayer();
     }
   }
