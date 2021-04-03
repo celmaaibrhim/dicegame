@@ -76,6 +76,8 @@ buttonHold.addEventListener('click', function () {
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
       document
+        var audio = new Audio('winning.mp3')
+      audio.play();
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
       dice.classList.add('hidden');
