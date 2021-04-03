@@ -56,9 +56,8 @@ buttonRoll.addEventListener('click', function () {
         `current--${activePlayer}`
       ).textContent = currentScore;
     } else {
-      var audio = new Audio('wrong.mp3')
+      var audio = new Audio('wrong.mp3');
       audio.play();
- 
       switchPlayer();
     }
   }
@@ -72,12 +71,12 @@ buttonHold.addEventListener('click', function () {
       scores[activePlayer];
     if (scores[activePlayer] >= 100) {
       playing = false;
+      var audio = new Audio('winning.mp3');
+      audio.play();
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
       document
-        var audio = new Audio('winning.mp3')
-      audio.play();
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
       dice.classList.add('hidden');
@@ -87,8 +86,4 @@ buttonHold.addEventListener('click', function () {
   }
 });
 
-// Reseting the game at any point
-
-// remove the winner class
-// set scores back to zero
 buttonNew.addEventListener('click', startGame);
